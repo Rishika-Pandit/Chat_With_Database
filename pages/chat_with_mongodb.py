@@ -63,7 +63,7 @@ def chat_with_mongodb_app():
         else:
             cursor_ans = coll.find(json_object)
 
-        answer_placeholder.text("Answer: ")
+        # answer_placeholder.text("Answer: ")
         for doc in cursor_ans:
             answer_placeholder.text(doc)
 
