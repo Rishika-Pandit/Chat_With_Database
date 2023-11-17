@@ -13,12 +13,12 @@ def clear_text():
     st.session_state["uri"] = ""
     st.session_state["query"] = ""
 
-def chat_with_db_app():
+def chat_with_sql_db_app():
     st.title("Chat With Your MySQL Database!")
 
     uri = st.text_input("Enter the Link to Your MySQL Database ", key="uri")
     OPENAI_API_KEY = st.text_input("Enter Your OpenAI Key ", key="key")
-    openai.api_key =  OPENAI_API_KEY
+    # openai.api_key =  OPENAI_API_KEY
     query = st.text_input("Enter Your Query", key="query")
     uri_placeholder = st.empty()
     query_placeholder = st.empty()
@@ -44,4 +44,4 @@ def chat_with_db_app():
         query_placeholder.empty()
 
 if __name__ == "__main__":
-    chat_with_db_app()
+    chat_with_sql_db_app()
