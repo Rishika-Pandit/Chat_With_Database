@@ -1,0 +1,8 @@
+langchain-experimental==0.0.36
+mysql-connector-python==8.0.26
+langchain==0.0.308
+streamlit==1.22.0
+openai==0.28.1
+pymysql==1.1.0
+SQLAlchemy==2.0.22
+mysqlclient==1.4.6
