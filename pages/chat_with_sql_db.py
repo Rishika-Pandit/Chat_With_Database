@@ -7,7 +7,7 @@ from langchain.agents.agent_types import AgentType
 from langchain.chat_models import ChatOpenAI
 import streamlit as st
 import os
-os.environ["OPENAI_API_KEY"] = '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'
+
 
 def clear_text():
     st.session_state["uri"] = ""
@@ -17,6 +17,8 @@ def chat_with_db_app():
     st.title("Chat With Your MySQL Database!")
 
     uri = st.text_input("Enter the Link to Your MySQL Database ", key="uri")
+    OPENAI_API_KEY = st.text_input("Enter Your OpenAI Key ", key="key")
+    openai.api_key =  OPENAI_API_KEY
     query = st.text_input("Enter Your Query", key="query")
     uri_placeholder = st.empty()
     query_placeholder = st.empty()
